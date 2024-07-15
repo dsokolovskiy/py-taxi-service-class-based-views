@@ -5,7 +5,7 @@
   <h3>Drivers:</h3>
   {% if car.drivers.all %}
     <ul>
-      {% for driver in car.drivers.all %}
+      {% for driver in car.drivers.select_related %}
         <li>{{ driver.username }}</li>
       {% endfor %}
     </ul>
